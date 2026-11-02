@@ -16,7 +16,14 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: quocanuit/guestbook:v3
+        image: phuocan803/guestbook:latest
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
         ports:
         - name: http-server
           containerPort: 3000
