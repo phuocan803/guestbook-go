@@ -19,7 +19,8 @@ spec:
     spec:
       containers:
       - name: redis-replica
-        image: registry.k8s.io/redis-slave:v2
+        image: redis:6.2-alpine
+        command: ["redis-server", "--replicaof", "redis-master", "6379"]
         ports:
         - name: redis-server
           containerPort: 6379
