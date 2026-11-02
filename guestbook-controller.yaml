@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: phuocan803/guestbook:latest
+        image: quocanuit/guestbook:v3
         resources:
           requests:
             cpu: "100m"
